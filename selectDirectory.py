@@ -38,6 +38,8 @@ def selectDir(pwd):
         print("\nContinue?: (y/n)")
         ch = input()
 
+        clear()
+
         if ch == "y":
             return pwd
         else:

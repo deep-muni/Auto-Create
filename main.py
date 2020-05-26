@@ -1,11 +1,13 @@
 import os
 from clear import clear
+from createDirectory import createDir
 from selectDirectory import selectDir
 
 pwd = "E:\\Project"
 os.chdir(pwd)
 
 clear()
+print("Current Directory >", pwd, "\n")
 
 while True:
     print("What operation you want to perform?: \n"
@@ -21,21 +23,11 @@ while True:
           "\nEnter your choice:")
 
     ch = input().upper()
-    if ch == 'Q':
+    if ch == 'A':
+        selectDir(pwd)
+    elif ch == 'B':
+        createDir()
+    elif ch == 'Q':
         break
-    choice = {
-        'A': selectDir(pwd),
-        'B': "HelloB",
-        'C': "HelloC",
-        'D': "HelloD",
-        'E': "HelloE",
-        'F': "HelloF",
-        'G': "HelloG",
-        'H': "HelloH",
-    }
-    clear()
-
-    res = choice.get(ch, "Invalid Input\n")
-    if "Invalid" in res:
-        print(res)
-
+    else:
+        print("Invalid Input")
