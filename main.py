@@ -1,6 +1,9 @@
 import os
 from clear import clear
+from createAngular import angularInit
 from createDirectory import createDir
+from createNode import nodeInit
+from createReact import reactInit
 from selectDirectory import selectDir
 
 pwd = "E:\\Project"
@@ -27,6 +30,12 @@ while True:
         selectDir(pwd)
     elif ch == 'B':
         createDir()
+    elif ch == 'C':
+        nodeInit()
+    elif ch == 'D':
+        angularInit()
+    elif ch == 'E':
+        reactInit()
     elif ch == 'Q':
         break
     else:
