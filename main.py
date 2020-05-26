@@ -1,5 +1,6 @@
 import os
 from clear import clear
+from selectDirectory import selectDir
 
 pwd = "E:\\Project"
 os.chdir(pwd)
@@ -23,7 +24,7 @@ while True:
     if ch == 'Q':
         break
     choice = {
-        'A': "HelloA",
+        'A': selectDir(pwd),
         'B': "HelloB",
         'C': "HelloC",
         'D': "HelloD",
